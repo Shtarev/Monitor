@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Monitor;
 
 class Locale
@@ -18,7 +19,7 @@ class Locale
     {
         $this->locale[0]='Реальный IP клиента: ';
         $this->locale[1]=' Клиент не использует Proxy Server';
-        $this->locale[2]=''; // было Клиент использует Proxy Server но не отображалось? не стал пепеделывать
+        $this->locale[2]='Статистика посещаемости';
         $this->locale[3]='Невозможно узнать IP клиента';
         $this->locale[4]='Пришёл с адреса: ';
         $this->locale[5]='Клиент зашёл с неизвестного адреса';
@@ -31,13 +32,12 @@ class Locale
         $this->locale[12]='Клиент № ';
         $this->locale[13]='Данные IP клиента: ';
         $this->locale[14]='Удалить';
-    }
     
     public function de()
     {
         $this->locale[0]='Echter User-IP : ';
         $this->locale[1]=' User verwendet Proxy Server nich';
-        $this->locale[2]='';
+        $this->locale[2]='Userstatistik';
         $this->locale[3]='User-IP ist unbekannt';
         $this->locale[4]='Ist von der Adresse: ';
         $this->locale[5]='User ist von der unbekannten Adresse gekommen';
@@ -56,7 +56,7 @@ class Locale
     {
         $this->locale[0]='Real User-IP : ';
         $this->locale[1]=' User does not use Proxy Server';
-        $this->locale[2]='';
+        $this->locale[2]='Statistics of attendance';
         $this->locale[3]='User-IP is unknown';
         $this->locale[4]='Has come from the address: ';
         $this->locale[5]='User has come from the unknown address';
