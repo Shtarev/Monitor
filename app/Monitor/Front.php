@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Monitor;
 
 use Illuminate\Http\Request;
@@ -6,13 +7,13 @@ use Session;
 
 class Front extends Monitor
 {
-	public $date; // Visiting date
-	public $time; // Visiting time
-	public $site; // Visiting site
-	public $clientIp; // User IP
-	public $client; // User ID
-	public $referer; // Whence has initially come
-	public $thisClient; // The same client The same client in base with with ID
+	public $date;
+	public $time;
+	public $site;
+	public $clientIp;
+	public $client;
+	public $referer;
+	public $thisClient;
 
 	public function __construct() 
 	{
@@ -25,9 +26,9 @@ class Front extends Monitor
 		$this->client = $this->client();
 		$this->referer =  $this->referer();
 		$this->thisClient =  $this->thisClient();
-		$this->indb(); // To keep то base
+		$this->indb();
 	}
-		
+	
 	public function clientIp()
 	{
 		$client  = @$_SERVER['HTTP_CLIENT_IP'];  
@@ -62,10 +63,11 @@ class Front extends Monitor
 			return session('client');
 		}
 	}
-	
+
 	public function referer()
 	{
 		$referer = request()->otkuda;
+		
 		$result = ($referer) ? $this->locale[4].$referer : $this->locale[5];
 		return $result;
 	}
