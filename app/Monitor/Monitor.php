@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Monitor;
 
 use Illuminate\Http\Request;
