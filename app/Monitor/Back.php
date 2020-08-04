@@ -13,7 +13,8 @@ class Back  extends Monitor
     public function __construct() 
 	{
 		parent::__construct();
-        if(request()->del)
+        
+		if(request()->del)
         {
             $arr=[];
             for($i=1; $i<32; $i++){
@@ -36,7 +37,7 @@ class Back  extends Monitor
     {
         return $this->Smonitor->count();
     }
-    
+
     public function dateArr()
     {
         $allDate =  $this->Smonitor->distinct()->pluck('date');
@@ -56,7 +57,7 @@ class Back  extends Monitor
             }
         }
     }
-    
+
     public function output()
     {
         if(request()->date)
@@ -71,7 +72,7 @@ class Back  extends Monitor
         $dateClients = $this->Smonitor->where('date', $date)->get();
         $self = route('monitor');
         $count = $dateClients->count();
-        
+
         $this->output = [
         	'all'=>$this->all,
             'dateArr'=>$this->dateArr,
@@ -79,6 +80,7 @@ class Back  extends Monitor
             'date'=>$date,
             'count'=>$count,
             'dateClients'=>$dateClients,
+			'locale2'=>$this->locale[2],
             'locale8'=>$this->locale[8],
             'locale9'=>$this->locale[9],
             'locale10'=>$this->locale[10],
