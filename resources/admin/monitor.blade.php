@@ -1,5 +1,6 @@
+<!-- extends 'admin.template' is example -->
 @extends('admin.template')
-@section('content')<br><center><h5>Статистика посещаемости</h5></center>
+@section('content')<br><center><h5>{{$locale2}}</h5></center>
 {{$locale8}}{{$all}}<hr>
 {{$locale9}}<br>
 @foreach($dateArr as $key=>$value) 
