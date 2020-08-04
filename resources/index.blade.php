@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Titel</title>
 </head>
   <body>
 	
 	
-	<!-- this include for all sites-->
+	<!-- include extends for all sites -->
 	<script src="{{ asset('js/monitor.js') }}"></script>
     <script>monitor("{{route('monitorClient')}}", "{{$otkuda}}")</script>
   </body>
