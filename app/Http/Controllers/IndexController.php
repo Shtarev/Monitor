@@ -9,9 +9,10 @@ class IndexController extends Controller
 {
 
     public function index(){
-    	$monitor = new Monitor;
+    	
+		$monitor = new Monitor;
 		$otkuda = $monitor->otkuda();
-   
+		
         return view('index', [
         'otkuda'=>$otkuda
         ]);
